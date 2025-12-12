@@ -30,4 +30,4 @@ It shows real-time exchange rates and updates country flags automatically based 
 ---
 
 ## 🌐 Live Demo
-[Click Here](https://your-username.github.io/currency-converter/)
+[Click Here](https://frontend-mini-projects-currency-converter.vercel.app/)
