@@ -9,11 +9,6 @@ const toCurr = document.querySelector(".to select");
 
 const msg = document.querySelector(".msg");
 
-// for(let code in countryList){
-//     console.log(code , countryList[code]);
-// }
-
-
 // For adding countries to dropdown
 for (let select of dropdowns) {
     for (const currcode in countryList) {     // currcode is INR
@@ -28,6 +23,7 @@ for (let select of dropdowns) {
         }
         select.append(newoption);
     }
+
     // event of changing flag
     select.addEventListener("change", (evt) => {
         updateFlag(evt.target);
@@ -38,13 +34,11 @@ for (let select of dropdowns) {
 const updateExchangeRate = async () => {
     let amountInput = document.querySelector(".amount input");
     let amtval = amountInput.value;
-    // console.log(amtval);
+
     if (amtval === "" || amtval < 1) {
         amtval = 1;
         amountInput.value = "1";
     }
-
-    // console.log(fromCurr.value,toCurr.value);
 
     let fromCountry = fromCurr.value.toLowerCase();
     let toCountry = toCurr.value.toLowerCase();
@@ -52,8 +46,7 @@ const updateExchangeRate = async () => {
     let URL = `${Base_URL}${fromCountry}.json`;
     let response = await fetch(URL);
     let data = await response.json();
-    // console.log(data[fromCountry][toCountry]);  returns the exchanged value rate
-    let rate = data[fromCountry][toCountry];
+    let rate = data[fromCountry][toCountry];    // returns the exchanged value rate
     let finalAmount = amtval * rate;
 
     msg.innerText = `${currencySymbols[fromCurr.value]}${amtval} ${fromCurr.value} = ${currencySymbols[toCurr.value]}${finalAmount} ${toCurr.value}`;
@@ -63,8 +56,7 @@ const updateExchangeRate = async () => {
 const updateFlag = (element) => {    // Here we are having select as element
     // console.log(element.value);   // returns changed country currency like INR
     let currcode = element.value;
-    let countryCode = countryList[currcode];    // like IN
-    // console.log(countryCode);
+    let countryCode = countryList[currcode];    // Returns country code Ex: IN
     let newsrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
     let newimg = element.parentElement.querySelector("img");   // since image tag is sibling of select
     newimg.src = newsrc;
