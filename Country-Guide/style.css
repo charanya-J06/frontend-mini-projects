@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #EEF3E6;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-guide {
+    width: 100%;
+    max-width: 540px;
+    background-color: #F9FBF5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar button {
+    font-size: 1rem;
+    background-color: #4F772D;
+    color: #ffffff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #3D5A23;
+}
+
+.search-bar input {
+    font-size: 1rem;
+    outline: none;
+    color: #2f4508;
+    border: 1px solid #B7C4A1;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+}
+
+.search-bar input:focus {
+    border-color: #4F772D;
+    box-shadow: 0 0 3px #4F772D;
+}
+
+
+.flag-img {
+    display: block;
+    width: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 6px;
+}
+
+.country-guide h2 {
+    font-size: 1.5rem;
+    color: #2D2A26;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.3rem;
+}
+
+.data-wrapper {
+    margin-bottom: 1rem;
+    letter-spacing: 0.3px;
+    font-size: 1.2rem;
+}
+
+.data-wrapper h4 {
+    display: inline;
+    color: #3f691a;
+    font-weight: 600;
+}
+
+.data-wrapper span {
+    color: #3A3A3A;
+}
+
+.country-guide h3 {
+    text-align: center;
+    color: #C1121F;
+    margin-top: 1rem;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        display: block;
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+
+    .country-guide {
+        margin: 2rem auto;
+    }
+
+    .search-bar {
+        display: flex;
+        gap: 0.7rem;
+    }
+
+    .search-bar input {
+        flex: 1;
+        min-width: 0;
+        font-size: 0.95rem;
+        padding: 0.65rem 0.7rem;
+    }
+
+    .search-bar button {
+        font-size: 0.9rem;
+        padding: 0.65rem 0.8rem;
+    }
+
+    .search-bar input:focus {
+        border-color: #4F772D;
+        box-shadow: 0 0 3px #4F772D;
+    }
+
+    .flag-img {
+        width: 130px;
+        margin-bottom: 1rem;
+    }
+
+    .country-guide h2 {
+        font-size: 1.6rem;
+    }
+
+    .data-wrapper {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.2rem;
+        align-items: flex-start;
+    }
+
+    .country-guide {
+        padding: 1.5rem;
+        border-radius: 14px;
+        margin-top: 2rem;
+    }
+
+    .search-bar {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.5rem;
+    }
+
+    .search-bar input {
+        font-size: 0.95rem;
+        padding: 0.65rem 0.7rem;
+    }
+
+    .search-bar input::placeholder {
+        color: #8FA07A;
+        font-size: 0.9rem;
+    }
+
+    .search-bar button {
+        font-size: 0.9rem;
+        padding: 0.65rem;
+    }
+
+    .search-bar input:focus {
+        border-color: #4F772D;
+        box-shadow: 0 0 3px #4F772D;
+    }
+
+    .flag-img {
+        width: 110px;
+    }
+
+    .country-guide h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .data-wrapper {
+        font-size: 0.95rem;
+    }
+}
