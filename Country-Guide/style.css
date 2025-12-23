@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .country-guide {
@@ -24,6 +25,15 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.app-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2D2A26;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
 }
 
 .search-bar {
@@ -111,6 +121,10 @@ body {
         margin: 2rem auto;
     }
 
+    .app-title {
+        font-size: 1.8rem;
+    }
+
     .search-bar {
         display: flex;
         gap: 0.7rem;
@@ -151,6 +165,7 @@ body {
 /* Mobile phones */
 @media (max-width: 480px) {
     .container {
+        display: block;
         padding: 1.2rem;
         align-items: flex-start;
     }
@@ -159,6 +174,11 @@ body {
         padding: 1.5rem;
         border-radius: 14px;
         margin-top: 2rem;
+    }
+
+    .app-title {
+        font-size: 1.6rem;
+        margin: 3rem 0 1.2rem 0;
     }
 
     .search-bar {
