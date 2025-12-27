@@ -6,7 +6,7 @@ The project includes **email validation**, **duplicate prevention**, and **autom
 ---
 
 ## 🌐 Live Demo
-[Click Here]()
+[Click Here](https://frontend-mini-projects-email-subscription-system.vercel.app/)
 
 > The live demo interacts with a deployed Google Apps Script Web App, similar to how real-world frontend applications communicate with backend APIs.
 
@@ -36,6 +36,7 @@ The project includes **email validation**, **duplicate prevention**, and **autom
 
 ## 🧠 How It Works
 
+```
 Frontend (HTML / CSS / JS)
 ↓ fetch()
 Google Apps Script (Web App API)
@@ -50,6 +51,8 @@ Google Sheets (Database)
    - Checks for duplicates
    - Stores email with timestamp
 5. User receives instant feedback  
+
+```
 
 ---
 
@@ -102,6 +105,7 @@ Email | timestamp
 
 ---
 
+```
 ## 📁 Project Structure
 
 ├── index.html
@@ -111,6 +115,8 @@ Email | timestamp
 ├── BackgroundImage.jpg
 ├── send-icon.png
 └── README.md
+
+```
 
 ---
 
