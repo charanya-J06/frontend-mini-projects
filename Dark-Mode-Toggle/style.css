@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Light theme */
+:root {
+    --background-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --border-color: #e4e7ec;
+    --text-primary: #101828;
+    --text-secondary: #475467;
+    --accent: #2563eb;
+}
+
+/* Dark theme */
+.dark {
+    --background-color: #0b1220;
+    --card-bg: #111827;
+    --border-color: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --accent: #60a5fa;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.65;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 12px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-toggle i {
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 26px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+/* First card highlighted */
+.highlight {
+    border-left: 4px solid var(--accent);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 55px 16px;
+    }
+}
