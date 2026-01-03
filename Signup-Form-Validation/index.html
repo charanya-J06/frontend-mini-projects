@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="signup-form" autocomplete="off">
+            <h4>Create Your Account</h4>
+
+            <div class="input-section">
+                <label>First Name<span class="required-color">*</span>
+                </label>
+                <input type="text" placeholder="Enter First Name" id="firstname-input" required>
+                <span id="firstname-error" class="hide required-color error-message">Invalid Input</span>
+                <span id="empty-firstname" class="hide required-color error-message">First Name Cannot Be Empty</span>
+            </div>
+
+            <div class="input-section">
+                <label>Last Name<span class="required-color">*</span>
+                </label>
+                <input type="text" placeholder="Enter Last Name" id="lastname-input" required>
+                <span id="lastname-error" class="hide required-color error-message">Invalid Input</span>
+                <span id="empty-lastname" class="hide required-color error-message">Last Name Cannot Be Empty</span>
+            </div>
+
+            <div class="input-section">
+                <label>Email<span class="required-color">*</span>
+                </label>
+                <input type="email" aria-label="Email Address" placeholder="Enter Email" id="email" required>
+                <span id="email-error" class="hide required-color error-message">Invalid Email</span>
+                <span id="empty-email" class="hide required-color error-message">Email Cannot Be Empty</span>
+            </div>
+
+            <div class="input-section">
+                <label>Phone<span class="required-color">*</span>
+                </label>
+                <input type="tel" placeholder="Enter Phone Number" id="phone" required>
+                <span id="phone-error" class="hide required-color error-message">Phone Number Should Have 10
+                    Digits</span>
+                <span id="empty-phone" class="hide required-color error-message">Phone Number Cannot Be Empty</span>
+            </div>
+
+            <div class="input-section">
+                <label>Password<span class="required-color">*</span></label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" aria-label="Password" placeholder="Enter Password" required>
+                    <span class="eye" id="toggle-password"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <span id="password-error" class="hide required-color error-message">Password Should Contain Letter,
+                    Special symbols, Numbers and Length>=8</span>
+                <span id="empty-password" class="hide required-color error-message">Password Cannot Be Empty</span>
+            </div>
+
+            <div class="input-section">
+                <label>Confirm Password<span class="required-color">*</span></label>
+                <div class="password-wrapper">
+                    <input type="password" id="verify-password" aria-label="Confirm Password"
+                        placeholder="Confirm Password" required>
+                    <span class="eye" id="toggle-confirm-password"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <span id="verify-password-error" class="hide required-color error-message">Should Be Same As Previous
+                    Password</span>
+                <span id="empty-verify-password" class="hide required-color error-message">Password Cannot Be
+                    Empty</span>
+            </div>
+
+            <button type="button" id="submit-button" disabled>Signup</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
